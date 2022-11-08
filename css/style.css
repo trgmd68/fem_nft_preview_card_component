@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainBGColor: hsl(217, 54%, 11%);
+  --cardBGColor: hsl(216, 50%, 16%);
+  --lineColor: hsl(215, 32%, 27%);
+  --primaryColor: hsl(215, 51%, 70%);
+  --secondaryColor: hsl(178, 100%, 50%);
+  --secondaryColorTransparent: hsla(178, 100%, 50%, 0.3);
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--primaryColor);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainBGColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--cardBGColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 330px;
+  max-height: 600px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.main-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  opacity: 0;
+  background-color: var(--secondaryColorTransparent);
+}
+
+.overlay img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.container:hover .overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.avatar {
+  vertical-align: middle;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.left {
+  float: left;
+  color: var(--secondaryColor);
+  font-weight: 600;
+}
+
+.left img,
+.right img {
+  margin-right: 0.5rem;
+}
+
+.right {
+  float: right;
+}
+footer {
+  clear: both;
+  border-top: 1px solid var(--lineColor);
+  padding: 1rem 0;
+}
+span {
+  color: white;
+}
+
+h1:hover,
+span:hover {
+  color: var(--secondaryColor);
+  cursor: pointer;
+}
